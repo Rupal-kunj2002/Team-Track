@@ -22,33 +22,63 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{ marginTop: "10rem", height: "15rem" }}>
-        <h1>Login</h1>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div>
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter email address"
-              value={values.email}
-              onChange={(e) => handleChange(e)}
-              style={{ width: "15rem", marginTop: "0.5rem" }}
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password"
-              value={values.password}
-              onChange={(e) => handleChange(e)}
-              style={{ width: "15rem", marginTop: "0.5rem" }}
-            />
-          </div>
-          <div style={{ marginTop: "0.5rem" }}>
-            <button>Submit</button>
-          </div>
-        </form>
+      <div
+        style={{
+          marginTop: "15rem",
+          height: "15rem",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            border: "solid 1px black",
+            height: "100%",
+            width: "30rem",
+            borderRadius: "5px",
+          }}
+        >
+          <h1 style={{ textDecoration: "underline" }}>Login</h1>
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <div>
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter email address"
+                value={values.email}
+                onChange={(e) => handleChange(e)}
+                style={{
+                  width: "15rem",
+                  marginTop: "0.5rem",
+                  height: "2rem",
+                  borderRadius: "5px",
+                }}
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                value={values.password}
+                onChange={(e) => handleChange(e)}
+                style={{
+                  width: "15rem",
+                  marginTop: "0.5rem",
+                  height: "2rem",
+                  borderRadius: "5px",
+                }}
+                required
+              />
+            </div>
+            <div style={{ marginTop: "0.5rem" }}>
+              <button style={{ width: "15rem", height: "1.5rem" }}>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
